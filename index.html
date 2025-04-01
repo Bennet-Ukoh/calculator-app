@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="A simple and accessible calculator app built with HTML, CSS, and JavaScript."
+    />
+    <meta
+      name="keywords"
+      content="calculator, web calculator, arithmetic, math, JavaScript, accessibility"
+    />
+    <meta name="author" content="Bennet Ukoh" />
+    <title>Calculator App | Simple & Accessible</title>
+    <link rel="stylesheet" href="/style.css" />
+  </head>
+  <body>
+    <!--
+      Project Objective:
+      The goal of this project is to build a Calculator App using HTML, CSS, and JavaScript.
+      The application allows users to perform basic arithmetic operations (addition, subtraction, multiplication, and division).
+
+      Use Case:
+      A user visits the calculator app to quickly compute simple arithmetic calculations. They can click on digit buttons, select an arithmetic operation, and then press the equal button to view the result. A clear button allows the user to reset the calculator for a new calculation.
+    -->
+    <header>
+      <h1>Simple Calculator</h1>
+    </header>
+
+    <main class="calculator" role="main">
+      <!-- Display Screen -->
+      <section aria-label="Calculator Display">
+        <input
+          type="text"
+          class="display"
+          id="display"
+          aria-live="polite"
+          aria-label="Current calculation display"
+          disabled
+          readonly
+          value="0"
+        />
+      </section>
+
+      <!-- Calculator Buttons -->
+      <section class="buttons" aria-label="Calculator Controls">
+        <button class="clear" id="clear" aria-label="Clear display">C</button>
+        <button class="operation" data-op="/" aria-label="Divide">
+          &#247;
+        </button>
+        <button class="operation" data-op="*" aria-label="Multiply">
+          &times;
+        </button>
+        <button class="operation" data-op="-" aria-label="Subtract">-</button>
+
+        <button data-digit="7" aria-label="7">7</button>
+        <button data-digit="8" aria-label="8">8</button>
+        <button data-digit="9" aria-label="9">9</button>
+        <button class="operation" data-op="+" aria-label="Add">+</button>
+
+        <button data-digit="4" aria-label="4">4</button>
+        <button data-digit="5" aria-label="5">5</button>
+        <button data-digit="6" aria-label="6">6</button>
+        <button class="equal" id="equal" aria-label="Equals">=</button>
+
+        <button data-digit="1" aria-label="1">1</button>
+        <button data-digit="2" aria-label="2">2</button>
+        <button data-digit="3" aria-label="3">3</button>
+        <button data-digit="0" style="grid-column: span 2" aria-label="0">
+          0
+        </button>
+      </section>
+    </main>
+
+    <footer>
+      <p>
+        &copy; 2025
+        <a
+          href="https://github.com/Bennet-Ukoh"
+          target="_blank"
+          rel="noopener noreferrer"
+          >Bennet Ukoh</a
+        >. Made with &hearts;.
+      </p>
+    </footer>
+
+    <script src="/script.js"></script>
+  </body>
+</html>
