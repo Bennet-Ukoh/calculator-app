@@ -22,29 +22,41 @@
       The application allows users to perform basic arithmetic operations (addition, subtraction, multiplication, and division).
 
       Use Case:
-      A user visits the calculator app to quickly compute simple arithmetic calculations. They can click on digit buttons, select an arithmetic operation, and then press the equal button to view the result. A clear button allows the user to reset the calculator for a new calculation.
+      A user visits the calculator app to quickly compute simple arithmetic calculations.
+      They can click on digit buttons, select an arithmetic operation, and then press the equal button to view the result.
+      A clear button allows the user to reset the calculator for a new calculation.
     -->
+
     <header>
       <h1>Simple Calculator</h1>
+      <nav aria-label="Main Navigation">
+        <ul>
+          <li>
+            <a href="#display-section" title="Go to Calculator Display"
+              >Display</a
+            >
+          </li>
+          <li>
+            <a href="#controls" title="Go to Calculator Controls">Controls</a>
+          </li>
+        </ul>
+      </nav>
     </header>
 
     <main class="calculator" role="main">
-      <!-- Display Screen -->
-      <section aria-label="Calculator Display">
-        <input
-          type="text"
+      <!-- Display Screen Section -->
+      <section id="display-section" aria-label="Calculator Display">
+        <output
           class="display"
           id="display"
           aria-live="polite"
           aria-label="Current calculation display"
-          disabled
-          readonly
-          value="0"
-        />
+          >0</output
+        >
       </section>
 
-      <!-- Calculator Buttons -->
-      <section class="buttons" aria-label="Calculator Controls">
+      <!-- Calculator Buttons Section -->
+      <section id="controls" class="buttons" aria-label="Calculator Controls">
         <button class="clear" id="clear" aria-label="Clear display">C</button>
         <button class="operation" data-op="/" aria-label="Divide">
           &#247;

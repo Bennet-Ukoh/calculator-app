@@ -12,7 +12,31 @@ body {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  height: 100vh;
+  min-height: 100vh;
+}
+
+/* Header */
+header {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+header h1 {
+  color: #222;
+  margin-bottom: 10px;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 15px;
+  justify-content: center;
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: #f39c12;
+  font-weight: bold;
 }
 
 /* Calculator Container */
@@ -30,6 +54,7 @@ body {
 
 /* Display */
 .display {
+  display: block;
   width: 100%;
   height: 60px;
   background: #333;
@@ -39,6 +64,7 @@ body {
   text-align: right;
   padding: 10px;
   border-radius: 8px;
+  margin-bottom: 20px;
 }
 
 /* Buttons Grid */
@@ -46,10 +72,9 @@ body {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   gap: 10px;
-  margin-top: 20px;
 }
 
-/* Buttons Styling */
+/* Button Styling */
 button {
   border: none;
   padding: 15px;
@@ -58,7 +83,7 @@ button {
   cursor: pointer;
   background: #444;
   color: #fff;
-  transition: 0.3s;
+  transition: background 0.3s;
 }
 
 button:hover {
@@ -73,6 +98,7 @@ button:active {
 .clear {
   background: #ff3b3b;
 }
+
 .clear:hover {
   background: #ff5e5e;
 }
@@ -80,6 +106,7 @@ button:active {
 .operation {
   background: #f39c12;
 }
+
 .operation:hover {
   background: #ffa726;
 }
@@ -88,13 +115,29 @@ button:active {
   background: #2ecc71;
   grid-row: span 2;
 }
+
 .equal:hover {
   background: #27ae60;
 }
 
 /* Footer */
-.footer {
-  margin-top: 20px;
+footer {
+  text-align: center;
   font-size: 0.9rem;
   color: #555;
+}
+
+/* Responsive Design */
+@media screen and (max-width: 480px) {
+  .calculator {
+    max-width: 90%;
+  }
+  .display {
+    font-size: 1.8rem;
+    height: 50px;
+  }
+  button {
+    padding: 12px;
+    font-size: 1.3rem;
+  }
 }
