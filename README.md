@@ -34,7 +34,7 @@ The Calculator App consists of:
 
 1. Clone the repository:
    ```bash
-   git clone https://github.com/YOUR_USERNAME/Calculator-App.git
+   git clone https://github.com/Bennet-Ukoh/Calculator-App.git
 
 2. Navigate to the project directory:
 ```cd Calculator-App```
